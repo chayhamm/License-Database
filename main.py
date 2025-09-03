@@ -1,10 +1,16 @@
 import asyncio
+from tinydb import TinyDB, Query
+from add import add_license
 
 async def Main():
-    while True:
+    database = TinyDB('licenses.json')
+    license = Query()
+    run = True
+
+    while run == True:
         removeOrAdd = input("Type A to add | Type R to remove: ").lower()
         if removeOrAdd == "a":
-            #link the add.py here
+            add_license(database)
             continue
         if removeOrAdd == "r":
             #link the remove.py here
