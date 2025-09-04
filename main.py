@@ -1,6 +1,7 @@
 import asyncio
 from tinydb import TinyDB, Query
 from add import add_license
+from remove import removeKey
 
 async def Main():
     database = TinyDB('licenses.json')
@@ -13,7 +14,7 @@ async def Main():
             add_license(database)
             continue
         if removeOrAdd == "r":
-            #link the remove.py here
+            removeKey(database)
             continue
         print("Invalid answer!")
         continue
