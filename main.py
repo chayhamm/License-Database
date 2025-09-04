@@ -2,6 +2,7 @@ import asyncio
 from tinydb import TinyDB, Query
 from add import add_license
 from remove import removeKey
+from wipe import wipeAll
 
 async def Main():
     database = TinyDB('licenses.json')
@@ -17,7 +18,7 @@ async def Main():
             removeKey(database)
             continue
         if removeOrAdd == "w":
-            pass # wipe function
+            wipeAll(database)
         print("Invalid answer!")
         continue
 
