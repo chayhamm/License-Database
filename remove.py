@@ -1,7 +1,8 @@
+from tinydb import Query
+
 def removeKey(db):
+    license = Query()
     key = input("Enter License Key: ")
-    if key not in db:
-        print("Not valid key!")
-        return
-    db.remove({key})
+    name = input("Enter Key Name: ")
+    db.remove((license.id == key) & (license.name == name))
     print(f'Removed: {key}')
