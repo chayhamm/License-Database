@@ -2,6 +2,10 @@ import uuid
 
 def add_license(db):
     name = input("Enter User Name: ")
-    uniqueID = uuid.uuid4
-    db.insert({f'{uniqueID}{name}'})
+    uniqueID = str(uuid.uuid4())
+    db.insert({"\n"})
+    db.insert({
+        "id": uniqueID,
+        "name": name
+    })
     print(f"License added for {name}: {uniqueID}{name}")
