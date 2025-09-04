@@ -16,6 +16,8 @@ async def Main():
         if removeOrAdd == "r":
             removeKey(database)
             continue
+        if removeOrAdd == "w":
+            pass # wipe function
         print("Invalid answer!")
         continue
 
