@@ -19,7 +19,9 @@ async def Main():
             continue
         if removeOrAdd == "w":
             wipeAll(database)
-        print("Invalid answer!")
-        continue
+            continue
+        else:
+            print("Invalid answer!")
+            continue
 
 asyncio.run(Main())
