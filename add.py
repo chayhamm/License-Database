@@ -1,4 +1,5 @@
 import uuid
+from sendwebhook import csendWebhook
 
 def add_license(db):
     name = input("Enter User Name: ")
@@ -8,3 +9,5 @@ def add_license(db):
         "name": name
     })
     print(f"License added for {name}: {uniqueID}{name}")
+    wholeKey = f'{uniqueID}{name}'
+    csendWebhook(wholeKey, action = "Add")

@@ -3,7 +3,7 @@ from datetime import datetime
 
 url = "https://ptb.discord.com/api/webhooks/1413243029589987379/3V6bLpfY7z4VyVwgsOec_FKurLGbRV_bD58gs6JCe0i1x-X_JloRuQgR7RteNlDwlH2n"
 
-def sendWebhook(fullKey, action): # add, remove
+def csendWebhook(fullKey, action): # add, remove
     data = {
         "content": "<@924269659774156822>",
         "embeds": {
