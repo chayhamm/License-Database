@@ -3,6 +3,7 @@ from tinydb import TinyDB, Query
 from add import add_license
 from remove import removeKey
 from wipe import wipeAll
+from search import searchDB
 
 async def Main():
     database = TinyDB('licenses.json')
@@ -19,6 +20,9 @@ async def Main():
             continue
         if removeOrAdd == "w":
             wipeAll(database)
+            continue
+        if removeOrAdd == "s":
+            searchDB(database)
             continue
         else:
             print("Invalid answer!")
