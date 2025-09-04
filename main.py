@@ -11,7 +11,7 @@ async def Main():
     run = True
 
     while run == True:
-        removeOrAdd = input("Type A to add | Type R to remove: ").lower()
+        removeOrAdd = input("Type A to add | Type R to remove | Type S to search | Type W to wipe: ").lower()
         if removeOrAdd == "a":
             add_license(database)
             continue
